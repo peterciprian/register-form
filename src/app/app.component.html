@@ -1,1 +1,15 @@
-<app-form-container></app-form-container>
+<div class="content" 
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxFlexFill
+    fxLayoutAlign="space-between stretch">
+  <div fxFlex="20" class="nav" fxFlex.xs="20">
+    <app-left-nav></app-left-nav>
+  </div>
+  <div fxFlex="40" class="main" fxFlex.xs="60">
+    <router-outlet></router-outlet>
+  </div>
+  <div fxFlex="20" class="hints" fxFlex.xs="20">
+    <app-hints></app-hints>
+  </div>
+</div>

@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { AppComponent } from './app.component';
-import { FormContainerComponent } from './form-container/form-container.component';
 import { LeftNavComponent } from './left-nav/left-nav.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { HintsComponent } from './hints/hints.component';
@@ -27,7 +28,6 @@ import { WorkHistoryFormComponent } from './form-components/work-history-form/wo
 @NgModule({
   declarations: [
     AppComponent,
-    FormContainerComponent,
     LeftNavComponent,
     TopNavComponent,
     NameFormComponent,
@@ -50,7 +50,8 @@ import { WorkHistoryFormComponent } from './form-components/work-history-form/wo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
