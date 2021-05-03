@@ -1,1 +1,6 @@
-<p>left-nav works!</p>
+<div class="menu-container">
+    <a *ngFor="let menu of navService.showMenuList; index as i;" class="menu-item" routerLink="{{menu.path}}" routerLinkActive="active">
+        <div class="menu-marker">{{i+1}}</div>
+        <div class="menu-label">{{menu.label}}</div>
+    </a>
+</div>

@@ -1,6 +1,7 @@
 {
   "name": "register",
   "version": "0.0.0",
+  "author": "Oláh Péter Ciprián <peterciprian@gmail.com>",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

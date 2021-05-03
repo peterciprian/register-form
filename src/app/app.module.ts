@@ -24,6 +24,7 @@ import { NameFormComponent } from './form-components/name-form/name-form.compone
 import { ProfilePictureFormComponent } from './form-components/profile-picture-form/profile-picture-form.component';
 import { SkillsFormComponent } from './form-components/skills-form/skills-form.component';
 import { WorkHistoryFormComponent } from './form-components/work-history-form/work-history-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { WorkHistoryFormComponent } from './form-components/work-history-form/wo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
