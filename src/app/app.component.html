@@ -7,7 +7,7 @@
     <app-left-nav></app-left-nav>
   </div>
   <div fxFlex="40" class="main" fxFlex.xs="60">
-    <app-top-nav></app-top-nav>
+    <app-top-nav *ngIf="!router.url.includes('finish')"></app-top-nav>
     <router-outlet></router-outlet>
   </div>
   <div fxFlex="20" class="hints" fxFlex.xs="20">

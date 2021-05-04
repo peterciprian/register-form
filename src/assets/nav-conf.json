@@ -1,7 +1,7 @@
 [
     {
        "index":0,
-       "label":"Theme",
+       "label":"Basic",
        "path":"/theme",
        "show":[
           
@@ -9,7 +9,7 @@
     },
     {
        "index":0,
-       "label":"Language",
+       "label":"Basic",
        "path":"/language",
        "show":[
           

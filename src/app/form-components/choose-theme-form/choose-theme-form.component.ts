@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChooseThemeFormComponent implements OnInit {
 
+  public selected: string = '';
+
   constructor() { }
 
   ngOnInit(): void {

@@ -39,20 +39,29 @@ export class NavigationService {
   }
 
   public next(): void {
-    let activeMenuIndex: number = this.navMenuList.findIndex( menu => {
-      return menu.path === this.router.routerState.snapshot.url;
-    })
+    let activeMenuIndex: number = this.getActiveMenuIndex();
 
     if (activeMenuIndex > -1 && this.navMenuList[activeMenuIndex +1])
     this.router.navigate([this.navMenuList[activeMenuIndex +1].path])
   }
   
   public prev(): void {
-    let activeMenuIndex: number = this.navMenuList.findIndex( menu => {
-      return menu.path === this.router.routerState.snapshot.url;
-    })
+    let activeMenuIndex: number = this.getActiveMenuIndex();
 
     if (activeMenuIndex > -1 && this.navMenuList[activeMenuIndex -1])
     this.router.navigate([this.navMenuList[activeMenuIndex -1].path])
+  }
+
+  public getActiveMenuIndex(): number {
+    return this.navMenuList.findIndex( menu => {
+      return menu.path === this.router.routerState.snapshot.url;
+    })
+  }
+
+  public getActiveMenuLabel(): string {
+    let index = this.navMenuList.findIndex( menu => {
+      return menu.path === this.router.routerState.snapshot.url;
+    });
+    return index>-1 ? this.navMenuList[index].label : '';
   }
 }

@@ -1,1 +1,13 @@
-<p>choose-theme-form works!</p>
+<div class="choose-form-wrapper">
+    <div class="themes-row">
+        <div 
+            class="theme-image-preview dark"
+            [class.selected]="selected == 'dark'"
+            (click)="selected = 'dark'"></div>
+        <div
+            class="theme-image-preview light"
+            [class.selected]="selected == 'light'"
+            (click)="selected = 'light'"></div>
+    </div>
+    <div class="image"></div>
+</div>

@@ -1,3 +1,5 @@
-<p>top-nav works!</p>
-<button (click)="navService.prev()"><</button>
-<button (click)="navService.next()">></button>
+<div class="top-nav-wrapper">
+    <button class="left" (click)="navService.prev()" [disabled]="navService.getActiveMenuIndex() == 0"></button>
+    <div class="title">{{navService.getActiveMenuLabel()}}</div>
+    <button class="right" (click)="navService.next()"></button>
+</div>

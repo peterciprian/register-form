@@ -1,0 +1,39 @@
+.top-nav-wrapper {
+    background: #232323;
+    border-radius: 4px;    
+    margin: 12px 0 4px;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 25px;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+
+    button {
+        background: #232323;
+        color: #F2F2F2;        
+        box-shadow: none;
+        border: none;
+        height: 20px;
+        width: 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        cursor: pointer;
+    
+        &.left {
+            background-image: url('/assets/icons/left.svg');
+        }
+        &.right {
+            background-image: url('/assets/icons/right.svg');
+        }
+        &:disabled {
+            cursor: not-allowed;
+            background-image: url('/assets/icons/grey-left.svg');
+        }
+    }
+}

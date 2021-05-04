@@ -7,7 +7,11 @@
     background-color: #232323;
   }
   .main {
-    background-color: #232323;
+    background-color: #333333;
+    font-family: Roboto;
+    font-style: normal;
+    font-feature-settings: 'pnum' on, 'lnum' on, 'ss07' on, 'ss03' on, 'liga' off;
+    color: #F2F2F2;
   }
   .hints {
     background-color: #232323;
