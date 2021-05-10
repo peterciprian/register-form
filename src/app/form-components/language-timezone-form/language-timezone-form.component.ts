@@ -9,6 +9,7 @@ import { NavigationService } from 'src/app/navigation.service';
 })
 export class LanguageTimezoneFormComponent implements OnInit {
 
+  public date = new Date(Date.now());
   constructor(
     public navService: NavigationService,
     public formData: FormDataService

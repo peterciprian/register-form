@@ -19,8 +19,16 @@ export class FormDataService {
 
   public timeZones = [
     {
-      label: '(UTC - 07:00( Mountain Time ( US & Canada)',
+      label: '(UTC - 07:00 Central Time)',
       value: 7
+    },
+    {
+      label: '(UTC - 08:00 Eastern Time)',
+      value: 8
+    },
+    {
+      label: '(UTC - 06:00  Mountain Time)',
+      value: 6
     }
   ]
 

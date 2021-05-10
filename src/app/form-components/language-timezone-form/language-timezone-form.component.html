@@ -1,27 +1,34 @@
 <div class="language-form-wrapper">
-    <div class="form-row">
-        <mat-form-field appearance="fill">
-            <mat-label>Language</mat-label>
-            <mat-select [(ngModel)]="formData.formData.language">
-              <mat-option *ngFor="let language of formData.languages" [value]="language">
-                {{language}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>Time Zone</mat-label>
-            <mat-select [(ngModel)]="formData.formData.timeZone">
-              <mat-option *ngFor="let zone of formData.timeZones" [value]="zone.value">
-                {{zone.label}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        
+  <div class="form-row">
+    <mat-form-field appearance="fill">
+      <mat-label>Language</mat-label>
+      <mat-select [(ngModel)]="formData.formData.language">
+        <mat-option *ngFor="let language of formData.languages" [value]="language">
+          {{language}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Time Zone</mat-label>
+      <mat-select [(ngModel)]="formData.formData.timeZone">
+        <mat-option *ngFor="let zone of formData.timeZones" [value]="zone.value">
+          {{zone.label}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="adjustTimeZone">
+      <input type="checkbox" name="refresh" id="autoRefresh" [(ngModel)]="formData.formData.adjustTimeZone">
+      <label for="autoRefresh">Automatically adjust clock for Daylight Saving time</label>
     </div>
-    <div class="image"></div>
-    <div class="button-row">
-        <div class="button-default" (click)="fast()">Fast registration</div>
-        <div class="button-default" (click)="detailed()">detailed registration</div>
+    <div class="current-dateTime">
+      Current date and time: {{ date | date:'EEEE, MMMM d, y, h:mm:ss a'}}
     </div>
-    
+  </div>
+  <div class="image"></div>
+  <div class="button-row">
+    <div class="button-default" (click)="fast()">Fast registration</div>
+    <div class="button-default" (click)="detailed()">detailed registration</div>
+  </div>
+
 </div>

@@ -10,10 +10,18 @@
 
     .form-row {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        padding: 0 12px;
 
+        mat-form-field {
+            width: 100%;
+        }
+        .adjustTimeZone {
+            display: flex;
+            flex-direction: row;
+        }
     }
     .image {
         background-image: url('/assets/images/undraw_road_sign_mfpo 1.png');
