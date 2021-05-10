@@ -4,6 +4,10 @@ export interface IFormData {
   language: string;
   timeZone: number;
   adjustTimeZone: boolean;
+  title: string;
+  fullName: string;
+  accostName: string;
+  nickname: string;
 
 }
 @Injectable({
@@ -32,13 +36,24 @@ export class FormDataService {
     }
   ]
 
+  public titles = [
+    'Mrs',
+    'Ms',
+    'Mr',
+    'Dr'
+  ];
+
   public formData: IFormData;
 
   constructor() {
     this.formData = {
       language: "English",
-      timeZone: 0,
+      timeZone: 8,
       adjustTimeZone: true,
+      title: "Mrs",
+      fullName: "",
+      accostName: "",
+      nickname: "",
     }
    }
 }

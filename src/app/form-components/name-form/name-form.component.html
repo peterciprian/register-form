@@ -1,1 +1,30 @@
-<p>name-form works!</p>
+<div class="name-form-wrapper">
+  <div class="form-row">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <mat-select [(ngModel)]="formData.formData.title">
+        <mat-option *ngFor="let title of formData.titles" [value]="title">
+          {{title}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Full Name</mat-label>
+      <input matInput value="fullName" [(ngModel)]="formData.formData.fullName">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Accost Name</mat-label>
+      <input matInput value="accostName" [(ngModel)]="formData.formData.accostName">
+    </mat-form-field>
+    <div class="hint">
+      Really important for smooth work
+    </div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Nickname</mat-label>
+      <input matInput value="nickname" [(ngModel)]="formData.formData.nickname">
+    </mat-form-field>
+  </div>
+  
+  <div class="image"></div>
+</div>
