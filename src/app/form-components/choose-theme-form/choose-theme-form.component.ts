@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from 'src/app/navigation.service';
 
 @Component({
   selector: 'app-choose-theme-form',
@@ -9,7 +10,7 @@ export class ChooseThemeFormComponent implements OnInit {
 
   public selected: string = '';
 
-  constructor() { }
+  constructor(public navService: NavigationService) { }
 
   ngOnInit(): void {
   }

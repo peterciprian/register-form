@@ -1,1 +1,27 @@
-<p>language-timezone-form works!</p>
+<div class="language-form-wrapper">
+    <div class="form-row">
+        <mat-form-field appearance="fill">
+            <mat-label>Language</mat-label>
+            <mat-select [(ngModel)]="formData.formData.language">
+              <mat-option *ngFor="let language of formData.languages" [value]="language">
+                {{language}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Time Zone</mat-label>
+            <mat-select [(ngModel)]="formData.formData.timeZone">
+              <mat-option *ngFor="let zone of formData.timeZones" [value]="zone.value">
+                {{zone.label}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        
+    </div>
+    <div class="image"></div>
+    <div class="button-row">
+        <div class="button-default" (click)="fast()">Fast registration</div>
+        <div class="button-default" (click)="detailed()">detailed registration</div>
+    </div>
+    
+</div>

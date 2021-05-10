@@ -1,0 +1,35 @@
+.language-form-wrapper {    
+    height: calc(100vh - 92px);
+    background: #232323;
+    border-radius: 6px;
+    display: flex;
+    padding-top: 17px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .form-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    .image {
+        background-image: url('/assets/images/undraw_road_sign_mfpo 1.png');
+        width: 100%;
+        height: 367px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+    .button-row {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 7px;
+
+    }
+}

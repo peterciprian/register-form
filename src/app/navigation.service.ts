@@ -16,26 +16,28 @@ export class NavigationService {
   private menuList: navMenu[] = [];
   public navMenuList: navMenu[] = [];
   public showMenuList: navMenu[] = [];
-  public regFormType: string = 'detailed';
+  public regFormType =new BehaviorSubject<string>('detailed');
   public activeMenu = new BehaviorSubject<navMenu | null>(null);
 
   constructor(
     private http: HttpClient,
     private router: Router
   ) {
-    this.http.get<navMenu[]>('assets/nav-conf.json').subscribe( data => {
-      this.menuList = data;
-      this.navMenuList = this.menuList.filter(menu => {
-        return menu.show.some(e => {
-          return e === this.regFormType;
-        }) || menu.show.length == 0;
-      })
-      this.showMenuList = this.navMenuList.filter(menu => {
-        return menu.show.some(e => {
-          return e === this.regFormType;
+    this.regFormType.subscribe( regformType => {
+      this.http.get<navMenu[]>('assets/nav-conf.json').subscribe( data => {
+        this.menuList = data;
+        this.navMenuList = this.menuList.filter(menu => {
+          return menu.show.some(e => {
+            return e === this.regFormType.value;
+          }) || menu.show.length == 0;
+        })
+        this.showMenuList = this.navMenuList.filter(menu => {
+          return menu.show.some(e => {
+            return e === this.regFormType.value;
+          })
         })
       })
-    });
+    })
   }
 
   public next(): void {

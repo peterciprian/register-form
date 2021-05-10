@@ -25,6 +25,11 @@ import { ProfilePictureFormComponent } from './form-components/profile-picture-f
 import { SkillsFormComponent } from './form-components/skills-form/skills-form.component';
 import { WorkHistoryFormComponent } from './form-components/work-history-form/work-history-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -47,13 +52,16 @@ import { HttpClientModule } from '@angular/common/http';
     FinishFormComponent,
     ChooseThemeFormComponent,
     LanguageTimezoneFormComponent,
-    HintsComponent
+    HintsComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    NoopAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
